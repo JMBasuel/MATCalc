@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compoundFrequencyItems">
+        <item>Monthly</item>
+        <item>Quarterly</item>
+        <item>Semi-annually</item>
+        <item>Annually</item>
+    </string-array>
+    <string-array name="amortizationFrequencyItems">
+        <item>Monthly</item>
+        <item>Annually</item>
+    </string-array>
+</resources>

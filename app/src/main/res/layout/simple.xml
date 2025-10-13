@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Simple">
+
+    <TextView
+        android:id="@+id/tv_Simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/simple_interest"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/tv_Result"
+        android:layout_width="323dp"
+        android:layout_height="176dp"
+        android:layout_below="@+id/tv_Simple"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#40FFFFFF"
+        android:gravity="center_vertical"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:ignore="RtlCompat" />
+
+    <RelativeLayout
+        android:id="@+id/lo_Principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_Result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_Principal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter_the_principal"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_Principal"
+            android:layout_width="166dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@+id/tv_Principal"
+            android:hint="@string/p"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textColorHint="#8E8E8E"
+            android:textSize="20sp"
+            tools:ignore="Autofill" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lo_Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lo_Principal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_Rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter_the_rate"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_Rate"
+            android:layout_width="166dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@+id/tv_Rate"
+            android:hint="@string/r"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textColorHint="#8E8E8E"
+            android:textSize="20sp"
+            tools:ignore="Autofill" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lo_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lo_Rate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter_time_in_months"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_Time"
+            android:layout_width="166dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/tv_Time"
+            android:hint="@string/t"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textColorHint="#8E8E8E"
+            android:textSize="20sp"
+            tools:ignore="Autofill" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_Calculate"
+        android:layout_width="162dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/lo_Time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/back"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+</RelativeLayout>

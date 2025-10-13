@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Dispersion">
+
+    <TextView
+        android:id="@+id/tv_Dispersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/measure_of_dispersion"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/tv_DataResult"
+        android:layout_width="323dp"
+        android:layout_height="176dp"
+        android:layout_below="@+id/tv_Dispersion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#40FFFFFF"
+        android:gravity="center"
+        android:lineSpacingExtra="8sp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/lo_Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_DataResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:id="@+id/tv_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:text="@string/enter_data_set"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edt_Data"
+            android:layout_width="108dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@+id/tv_Data"
+            android:autofillHints=""
+            android:gravity="center"
+            android:hint="@string/x"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lo_Buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lo_Data"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/btn_Remove"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/buttons"
+            android:text="@string/remove"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_Add"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_Remove"
+            android:background="@drawable/buttons"
+            android:text="@string/add"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_Calculate"
+        android:layout_width="162dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/lo_Buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/back"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_Result"
+        android:layout_width="302dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/tv_Dispersion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#40FFFFFF"
+        android:visibility="gone"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:id="@+id/sv_Scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_above="@+id/tv_Deviation"
+        android:layout_below="@+id/tv_Result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="#40FFFFFF">
+
+        <TableLayout
+            android:id="@+id/tb_Dispersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center">
+
+            <TableRow
+                android:id="@+id/tr_Header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/tc_X"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tc_X2"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/x_x"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tc_XX"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/x_x2"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_Deviation"
+        android:layout_width="302dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/btn_DispersionBack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="#40FFFFFF"
+        android:gravity="center_vertical"
+        android:paddingStart="50dp"
+        android:paddingEnd="30dp"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:visibility="gone"
+        android:textSize="14sp"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/btn_DispersionBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/back"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/menu">
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.zinterr.matcalc.Menu"
+        android:label="menu"
+        tools:layout="@layout/menu" >
+        <action
+            android:id="@+id/action_menu_to_basic"
+            app:destination="@id/basic" />
+        <action
+            android:id="@+id/action_menu_to_fibonacci"
+            app:destination="@id/fibonacci" />
+        <action
+            android:id="@+id/action_menu_to_distribution"
+            app:destination="@id/distribution" />
+        <action
+            android:id="@+id/action_menu_to_tendency"
+            app:destination="@id/tendency" />
+        <action
+            android:id="@+id/action_menu_to_dispersion"
+            app:destination="@id/dispersion" />
+        <action
+            android:id="@+id/action_menu_to_correlation"
+            app:destination="@id/correlation" />
+        <action
+            android:id="@+id/action_menu_to_regression"
+            app:destination="@id/regression" />
+        <action
+            android:id="@+id/action_menu_to_simple"
+            app:destination="@id/simple" />
+        <action
+            android:id="@+id/action_menu_to_compound"
+            app:destination="@id/compound" />
+        <action
+            android:id="@+id/action_menu_to_amortization"
+            app:destination="@id/amortization" />
+        <action
+            android:id="@+id/action_menu_to_privacyPolicy"
+            app:destination="@id/privacyPolicy" />
+    </fragment>
+    <fragment
+        android:id="@+id/basic"
+        android:name="com.zinterr.matcalc.Basic"
+        android:label="basic"
+        tools:layout="@layout/basic" />
+    <fragment
+        android:id="@+id/fibonacci"
+        android:name="com.zinterr.matcalc.Fibonacci"
+        android:label="fibonacci"
+        tools:layout="@layout/fibonacci" />
+    <fragment
+        android:id="@+id/distribution"
+        android:name="com.zinterr.matcalc.Distribution"
+        android:label="distribution"
+        tools:layout="@layout/distribution" >
+        <action
+            android:id="@+id/action_distribution_to_tendency"
+            app:destination="@id/tendency" />
+    </fragment>
+    <fragment
+        android:id="@+id/tendency"
+        android:name="com.zinterr.matcalc.Tendency"
+        android:label="tendency"
+        tools:layout="@layout/tendency" />
+    <fragment
+        android:id="@+id/dispersion"
+        android:name="com.zinterr.matcalc.Dispersion"
+        android:label="dispersion"
+        tools:layout="@layout/dispersion" />
+    <fragment
+        android:id="@+id/correlation"
+        android:name="com.zinterr.matcalc.Correlation"
+        android:label="correlation"
+        tools:layout="@layout/correlation" >
+        <action
+            android:id="@+id/action_correlation_to_regression"
+            app:destination="@id/regression" />
+    </fragment>
+    <fragment
+        android:id="@+id/regression"
+        android:name="com.zinterr.matcalc.Regression"
+        android:label="regression"
+        tools:layout="@layout/regression" />
+    <fragment
+        android:id="@+id/simple"
+        android:name="com.zinterr.matcalc.Simple"
+        android:label="simple"
+        tools:layout="@layout/simple" />
+    <fragment
+        android:id="@+id/compound"
+        android:name="com.zinterr.matcalc.Compound"
+        android:label="compound"
+        tools:layout="@layout/compound" />
+    <fragment
+        android:id="@+id/amortization"
+        android:name="com.zinterr.matcalc.Amortization"
+        android:label="amortization"
+        tools:layout="@layout/amortization" />
+    <fragment
+        android:id="@+id/privacyPolicy"
+        android:name="com.zinterr.matcalc.PrivacyPolicy"
+        android:label="privacy_policy"
+        tools:layout="@layout/privacy_policy" />
+</navigation>

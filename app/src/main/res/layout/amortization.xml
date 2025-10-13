@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Amortization">
+
+    <TextView
+        android:id="@+id/tv_Amortization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/amortization"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+    <RelativeLayout
+        android:id="@+id/lo_Principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Amortization"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:id="@+id/tv_Principal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter_the_principal"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_Principal"
+            android:layout_width="166dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@+id/tv_Principal"
+            android:hint="@string/p"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textColorHint="#8E8E8E"
+            android:textSize="20sp"
+            tools:ignore="Autofill" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lo_Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lo_Principal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_Rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter_the_rate"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_Rate"
+            android:layout_width="166dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@+id/tv_Rate"
+            android:hint="@string/r"
+            android:inputType="number|numberDecimal"
+            android:textAlignment="center"
+            android:textColorHint="#8E8E8E"
+            android:textSize="20sp"
+            tools:ignore="Autofill" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lo_CompoundFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lo_Rate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_CompoundFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:text="@string/compound_frequency"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spn_CompoundFrequency"
+            android:layout_width="166dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="27dp"
+            android:layout_toEndOf="@+id/tv_CompoundFrequency"
+            android:animateLayoutChanges="false"
+            android:entries="@array/amortizationFrequencyItems"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lo_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lo_CompoundFrequency"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter_time_in_years"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_Time"
+            android:layout_width="166dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="6dp"
+            android:layout_toEndOf="@+id/tv_Time"
+            android:hint="@string/t"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColorHint="#8E8E8E"
+            android:textSize="20sp"
+            tools:ignore="Autofill" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lo_PayFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lo_Time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_PayFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:text="@string/payment_frequency"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spn_PayFrequency"
+            android:layout_width="166dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/tv_PayFrequency"
+            android:animateLayoutChanges="false"
+            android:entries="@array/amortizationFrequencyItems"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_Calculate"
+        android:layout_width="162dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/lo_PayFrequency"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/back"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:id="@+id/sv_Scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_above="@+id/btn_AmortizationBack"
+        android:layout_below="@+id/tv_Amortization"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#40FFFFFF"
+        android:visibility="gone">
+
+        <TableLayout
+            android:id="@+id/tb_Amortization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/tv_Count"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_Periodic"
+                    android:layout_width="87dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/periodic"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_Interest"
+                    android:layout_width="87dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interest"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_Repayment"
+                    android:layout_width="87dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repayment"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_Balance"
+                    android:layout_width="91dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/balance"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_AmortizationBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/back"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

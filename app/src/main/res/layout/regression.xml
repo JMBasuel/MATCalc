@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Regression">
+
+    <TextView
+        android:id="@+id/tv_Regression"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/regression_analysis"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+    <ScrollView
+        android:id="@+id/sv_Scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_above="@id/lo_Buttons"
+        android:layout_below="@+id/tv_Regression"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#40FFFFFF">
+
+        <TableLayout
+            android:id="@+id/tb_Regression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/tr_Regression"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/tc_00"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tc_01"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/y"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tc_02"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/xy"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tc_03"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/x2"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/tc_X"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/x"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    tools:ignore="Autofill" />
+
+                <EditText
+                    android:id="@+id/tc_Y"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/y"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/tc_XY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/tc_X2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr_Total"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tc_SX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tc_SY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tc_SXY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tc_SX2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/lo_Buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_Calculate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/btn_RemoveRow"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/buttons"
+            android:enabled="false"
+            android:text="@string/remove_row"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_AddRow"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_RemoveRow"
+            android:background="@drawable/buttons"
+            android:enabled="false"
+            android:text="@string/add_row"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_Calculate"
+        android:layout_width="162dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/btn_Back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttons"
+        android:enabled="false"
+        android:text="@string/calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/back"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_Result"
+        android:layout_width="356dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tv_Regression"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="#40FFFFFF"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="8sp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/tv_TestResult"
+        android:layout_width="356dp"
+        android:layout_height="43dp"
+        android:layout_below="@id/tv_Result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="#40FFFFFF"
+        android:gravity="center"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/lo_Test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_TestResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_Test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="32dp"
+            android:text="@string/test_prediction"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_Test"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@+id/tv_Test"
+            android:hint="@string/x"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:ignore="Autofill" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_Test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lo_Test"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/predict"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_RegressionBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/buttons"
+        android:text="@string/back"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
