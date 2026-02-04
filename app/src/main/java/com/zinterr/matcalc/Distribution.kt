@@ -193,7 +193,7 @@ class Distribution : Fragment() {
     private fun remove() {
         val text = binding.tvDataResult.text
         val last = dataList.last().toString()
-        binding.tvDataResult.text = text.substring(0, text.length - last.length).trim()
+        binding.tvDataResult.text = text.dropLast(last.length).trim()
         dataList.removeAt(dataList.lastIndex)
         binding.tvDataCount.text = "${dataList.size}"
     }
