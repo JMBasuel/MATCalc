@@ -34,8 +34,7 @@
             <TableRow
                 android:id="@+id/tr_Regression"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:ignore="UselessParent">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/tc_00"

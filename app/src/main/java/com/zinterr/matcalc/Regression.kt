@@ -271,9 +271,7 @@ class Regression : Fragment() {
         val tableCell = EditText(requireContext())
         tableCell.inputType = InputType.TYPE_CLASS_NUMBER
         tableCell.gravity = Gravity.CENTER
-        tableCell.isEnabled = true
         tableCell.hint = hint
-        tableCell.requestFocus()
         tableCell.height = 105
         return tableCell
     }

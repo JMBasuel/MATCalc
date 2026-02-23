@@ -210,7 +210,7 @@ class Tendency : Fragment() {
                         if (count == 0 && before == 1) interval = 0
                         if (edtOneText.isNotEmpty() && edtTwoText.isNotEmpty()) {
                             if (edtOneText[(edtOneText.length - 1) / 2] == '-') {
-                                if (edtOneText.matches(Regex("^[0-9-]+\$"))) {
+                                if (edtOneText.matches(Regex("^[0-9-]+$"))) {
                                     interval = edtOneText.substring(((edtOneText.length - 1) / 2) + 1)
                                         .toInt() - edtOneText.substring(0, (edtOneText.length - 1) / 2).toInt()
                                     classSize = interval + 1
